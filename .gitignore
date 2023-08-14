@@ -1,0 +1,35 @@
+dist
+# maven ignore
+target/
+node_modules
+**/WEB-INF/classes/
+*.jar
+*.war
+*.zip
+*.tar
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+/.idea/
+*.ipr
+*.iml
+*.iws
+# 忽略idea文件夹
+.idea
+# temp ignore
+logs/
+*.doc
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+*.versionsBackup
+
+# system ignore
+.DS_Store
+Thumbs.db
