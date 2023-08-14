@@ -14,6 +14,11 @@
     "lint-staged": "npx lint-staged",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "yushu",
     "common",
