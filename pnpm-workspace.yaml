@@ -1,11 +1,14 @@
+# 如果启用此选项,则工作区中的本地包优先于注册表中的包,即使注册表中有更新版本的包也是如此
+prefer-workspace-packages: true
+
 packages:
   # all packages in direct subdirs of packages/
-  - 'packages/*'
+  - "packages/*"
   # all packages in subdirs of components/
-  - 'components/**'
+  - "components/**"
   # all framework in subdirs of framework
-  - 'frameworks/**'
+  - "frameworks/**"
   # all app in subdirs of app
-  - 'apps/**'
+  - "apps/**"
   # exclude packages that are inside test directories
-  - '!**/test/**'
+  - "!**/test/**"

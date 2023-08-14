@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["@commitlint/config-conventional", "cz"],
+  extends: ["@commitlint/config-conventional"],
 
   //下面这些是自定义的，可以都不要
   rules: {

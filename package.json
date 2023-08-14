@@ -6,7 +6,6 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "commit": "cz",
-    "postinstall": "husky install",
     "version-packages": "changeset version",
     "eslint": "npx eslint --ext .js,.vue,.ts,.jsx --ignore-path .gitignore --fix src",
     "prettier": "prettier --write .",
@@ -37,7 +36,12 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.0",
     "only-allow": "^1.1.1",
@@ -51,7 +55,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-customizable"
     }
   },
   "lint-staged": {
