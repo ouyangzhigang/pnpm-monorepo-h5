@@ -1,0 +1,22 @@
+# Ignore artifacts:
+/build/
+coverage
+/node_modules/**
+/dist/*
+/lib/
+
+# Ignore all HTML files:
+*.html
+
+**/*.svg
+**/*.sh
+ 
+# 不知为啥prettier自动修复完缩进后，stylelint插件会说不对，所以先让prettier不格式化scss和css问件忽略
+apps/**/*.sass
+apps/**/*.scss
+apps/**/*.css
+
+frameworks/**/*.css
+frameworks/**/*.scss
+frameworks/**/*.sass
+

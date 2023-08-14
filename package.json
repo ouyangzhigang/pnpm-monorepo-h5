@@ -7,7 +7,13 @@
     "preinstall": "npx only-allow pnpm",
     "commit": "cz",
     "postinstall": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "version-packages": "changeset version",
+    "eslint": "npx eslint --ext .js,.vue,.ts,.jsx --ignore-path .gitignore --fix src",
+    "prettier": "prettier --write .",
+    "lint:style": "stylelint \"src/*.{css,scss}\"",
+    "fix:style": "stylelint --fix \"src/*.{css,scss}\"",
+    "lint-staged": "npx lint-staged",
+    "prepare": "husky install"
   },
   "keywords": [
     "yushu",
@@ -26,11 +32,38 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^20.4.9",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
+    "lint-staged": "^14.0.0",
     "only-allow": "^1.1.1",
+    "prettier": "^3.0.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^34.0.0",
     "typescript": "^5.1.6",
     "vite": "^4.4.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{scss,less,css}": [
+      "stylelint --fix"
+    ],
+    "*.{html,json,yaml,md}": [
+      "prettier --write"
+    ]
   }
 }
