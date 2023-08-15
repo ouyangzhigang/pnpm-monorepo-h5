@@ -1,3 +1,9 @@
 {
-  "extends": "../../tsconfig.eslint.json"
+  // "extends": "../../tsconfig.eslint.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "composite": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

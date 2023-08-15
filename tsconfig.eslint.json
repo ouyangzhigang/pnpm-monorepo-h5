@@ -5,10 +5,18 @@
     // ensure that nobody can accidentally use this config for a build
     "noEmit": true
   },
-  "include": [
-    // whatever paths you intend to lint
-    "packages",
-    "components"
-  ],
-  "exclude": ["node_modules", "/node_modules/", "/dist/", "/build/", "/test/"]
+  // "include": [
+  //   // whatever paths you intend to lint
+  //   "packages",
+  //   "components"
+  // ],
+  "exclude": ["node_modules", "/node_modules/", "/dist/", "/build/", "/test/"],
+  "references": [
+    {
+      "path": "./components"
+    },
+    {
+      "path": "./packages/common"
+    }
+  ]
 }
